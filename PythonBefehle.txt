@@ -1,0 +1,489 @@
+str		string (Wort/ Buchstabe/ Zahlen in '')
+type()	 	zeigt den Typ an (str, int, float, boolean) 	Text Type: str		Numeric Types: int, float, complex	     Sequence Types: list, tuple, range		Mapping Type: dict	Set Types: set, frozenset	Boolean Type: bool	Binary Types: bytes, bytearray, memoryview	None Type: NoneType
+iterable	string, list, tuple, set, dictionary
++	 	addiert int und float ;addiert/verkettet strings (ohne Leerzeichen)
+[i]	 	i=Position des Buchstaben in strings bzw. Position des Objekts in einer Liste
+re()	 	import re regular expressions operations \s space [ \f\n\r\t\v], \n line feed , \r carriage return, \t tab, \f form feed, \v vertical tab
+''' 	 	Triple quotes '''/""" werden fuer mehrzeilige strings / Texte benutzt; es koennen auch Klammern ('string'[naechste zeile] 'string'[naechste zeile] 'string' ... 'string') benutzt werden, oder statt Klammern am ende der Zeile \ .  Fuer Zeilenwechsel muss \n innerhalb der '' zum schluss eingefuegt werden
+""" 	 	Triple quotes '''/""" werden fuer mehrzeilige strings / Texte benutzt; es koennen auch Klammern ('string'[naechste zeile] 'string'[naechste zeile] 'string' ... 'string') benutzt werden, oder statt Klammern am Ende der Zeile \ .  Fuer Zeilenwechsel muss \n innerhalb der '' zum schluss eingefuegt werden 
+capitalize()	string.capitalize()			konvertiert den ersten Buchstaben eines strings in einen Grossbuchstaben	
+casefold()	string.casefold()			konvertiert alle Grossbuchstabenin einem string in Kleinbuchstaben   
+center()	string.center(x)				der string wird in die Mitte der angegebenen Stellen x gesetzt
+count()		string.count(value, start(opt), end(opt))	zaehlt wie oft x in einem string s vorkommt.      value	Required. A String. The string to value to search for.    start	Optional. An Integer. The position to start the search. Default is 0. 	end Optional. An Integer. The position to end the search. Default is the end of the string
+encode()	string.encode(encoding=encoding, errors=errors)	decodiert Sonderzeichen in ascii
+endswith()	string.endswith(value, start, end)	Gibt True aus, falls der string mit dem Wert endet, sonst False	
+expandtabs()	string.expandtabs(tabsize)		bestimmt die Laenge der Tabs(\t)
+find()		string.find(value, start, end)		sucht nach einem Wert(Buchstaben, Woerter, Zahlen) und gibt die Position im String an
+format()	string.format(value1, value2...)	fuegt die Werte der Reihe nach oder nach Indizes in die entsprechenden Stellen{} im String ein
+format_map()	Formats specified values in a string
+index()		string.index(value, start, end)		Searches the string for a specified value and returns the position of where it was found
+isalnum()	string.isalnum()			checkt ob ein string nur alphanumerische (Zahlen+Buchstaben) Zeichen enthaelt.
+isalpha()	string.isalpha()			True wenn alle Zeichen Buchstaben sind
+isascii()	string.isascii()			True wenn alle Zeichen ascii-Zeichen sind
+isdecimal()	string.isdecimal()			True wenn alle Zeichen dezimalzahlen sind
+isdigit()	string.isdigit()			True wenn alle Zeichen Zahlen sind
+isidentifier()	string.isidentifier()			Returns True if the string is an identifier
+islower()	string.islower()			True wenn alle Buchstaben im string Kleinbuchstaben/ klein geschrieben sind
+isnumeric()	string.isnumeric()			True if all characters in the string are numeric
+isprintable()	string.isprintable()			checkt ob ein string s druckbar ist. Ausnahmen sind lediglich '\f', '\n' usw  s.isprintable()
+isspace()	string.isspace()			checkt ob ein string nur aus Leerstellen besteht
+istitle()	string.istitle()			True wenn der string den Regeln eines title entspricht
+isupper()	string.isupper()			True wenn alle Buchstaben im string Grossbuchstaben sind/ klein geschrieben sind
+join()		string*.join(iterable)			die Zeichen/Elemente eines strings (sets, dictionarys, lists, tuples)  werden durch das vorgestellte string* getrennt.  										#iterable = strings, sets, dictionary, tuples, lists, dictionaries			#trennen, separieren
+
+ljust()		string.ljust(length, character)		Returns a left justified version of the string
+lower()		string.lower()				konvertiert alle Buchstaben in Kleinbuchstaben																				#konvertieren, umschreiben, klein schreiben, aendern, gross in klein
+lstrip()	string.lstrip(characters)		eliminiert die Leerzeichen am Anfang eines strings oder entsprechende Zeichen am Ende
+maketrans()	str.maketrans(x, y, z)			Returns a translation table to be used in translations
+partition()	string.partition(value)			Returns a tuple where the string is parted into three parts
+repeat		string * x				wiederholt den string x-mal  		#wiederholen, Zeichen, Text
+replace()	string.replace(oldvalue, newvalue, count)	oldvalue	Required. The string to search for. newvalue	Required. The string to replace the old value with. count	Optional. A number specifying how many occurrences of the old   value you want to replace. Default is all occurences. Returns a string where a specified value is replaced with a specified value
+rfind()		string.rfind(value, start, end)		Searches the string for a specified value and returns the last position of where it was found
+rindex()	string.rindex(value, start, end)	Searches the string for a specified value and returns the last position of where it was found
+rjust()		string.rjust(length, character)		length	Required. The length of the returned string. character	Optional. A character to fill the missing space (to the left of the string). Default is " " (space).	Returns a right justified version of the string
+rpartition()	string.rpartition(value)		Returns a tuple where the string is parted into three parts
+rsplit()	string.rsplit(separator, maxsplit)	Splits the string at the specified separator, and returns a list
+rstrip()	string.rstrip(characters)		eliminiert die Leerzeichen am Ende eines strings oder entsprechende 	Zeichen am Ende	
+split()		string.split(separator, maxsplit)	separator	Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator. maxsplit	Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"	trennt Woerter innerhalb eines strings und erstellt daraus eine Liste
+splitlines()	string.splitlines(keeplinebreaks)	keeplinebreaks	Optional. Specifies if the line breaks should be 	included (True), or not (False). Default value is False	Splits the string at line breaks and returns a list
+startswith()	string.startswith(value, start, end)	checkt ob ein string mit den angegebenen Buchstaben "beginnt". Es kann auch erst ab einer bestimmten Position der Anfang gecheckt werden.
+strip()		string.strip(characters)		eliminiert die Leerzeichen am Anfang und Ende eines strings oder 	entsprechende Zeichen am Anfang und Ende
+swapcase()	string.swapcase()			Grossbuchstaben werden zu Kleinbuchstaben und umgekehrt
+title()		string.title()				konvertiert den ersten Buchstaben jedes Wortes in einen 		Grossbuchstaben
+translate()	string.translate(table)			Returns a translated string
+upper()		string.upper()				konvertiert alle Buchstaben in Grossbuchstaben
+zfill()		string.zfill(len)			Fills the string with a specified number of 0 values at the beginning
+append()	list.append(elmnt)			elmnt	Required. An element of any type (string, number, object etc.)	Adds an element at the end of the list
+clear()		list.clear()				Removes all the elements from the list / dictionary
+copy()		list.copy()				Returns a copy of the list / dictionary
+count()		list.count(value)			value	Required. Any type (string, number, list, tuple, etc.). The    value to search for.	Returns the number of elements with the specified value
+extend()	list.extend(iterable)			iterable	Required. Any iterable (list, set, tuple, etc.)	Add the elements of a list (or any iterable), to the end of the current list
+index()		list.index(elmnt)			elmnt	Required. Any type (string, number, list, etc.). The element to search for	Returns the index of the first element with the specified value
+insert()	list.insert(pos, elmnt)			pos	Required. A number specifying in which position to insert the  value. elmnt	Required. An element of any type (string, number, object etc.)	Adds an element at the specified position
+pop()		list.pop(pos)				pos	Optional. A number specifying the position of the element you  want to remove, default value is -1, which returns the last item.	Removes the element at the specified position
+remove()	list.remove(elmnt)			elmnt	Required. Any type (string, number, list etc.) The element you want to remove	Removes the first item with the specified value
+reverse()	list.reverse()				kehrt die Ordnung der list um
+sort()		list.sort(reverse=True|False, key=myFunc)	reverse	Optional. reverse=True will sort the list descending.  Default is reverse=False. key	Optional. A function to specify the sorting criteria(s)	sortiert die list
+fromkeys()	dict.fromkeys(keys, value)		keys	Required. An iterable specifying the keys of the new dictionary. value	Optional. The value for all keys. Default value is None	Returns a dictionary with the specified keys and value
+get()		dictionary.get(keyname, value)		keyname	Required. The keyname of the item you want to return the value from. value	Optional. A value to return if the specified key does not exist. Default value None	Returns the value of the specified key
+items()		dictionary.items()			Returns a list containing a tuple for each key value pair
+keys()		dictionary.keys()			Returns a list containing the dictionary's keys
+pop()		dictionary.pop(keyname, defaultvalue)	keyname	Required. The keyname of the item you want to remove. defaultvalue	Optional. A value to return if the specified key do not exist. If this parameter is not specified, and the no item with the specified key is found, an error is raised! Removes the element with the specified key
+popitem()	dictionary.popitem()			Removes the last inserted key-value pair
+setdefault()	dictionary.setdefault(keyname, value)	keyname	Required. The keyname of the item you want to return the value from. value	Optional. If the key exist, this parameter has no effect. If the key does not exist, this value becomes the key's value. Default value None.	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	dictionary.update(iterable)		iterable	A dictionary or an iterable object with key value pairs, that will be inserted to the dictionary.	Updates the dictionary with the specified key-value pairs
+values()	dictionary.values()			Returns a list of all the values in the dictionary
+count()		tuple.count(value)			value	Required. The item to search for	Returns the number of times a specified value occurs in a tuple
+index()		tuple.index(value)			value	Required. The item to search for	Searches the tuple for a specified value and returns the position of where it was found
+close()		file.close()				Closes the file
+detach()	Returns the separated raw stream from the buffer
+fileno()	file.fileno()				Returns a number that represents the stream, from the operating system's perspective
+flush()		file.flush()				Flushes the internal buffer
+isatty()	file.isatty()				Returns whether the file stream is interactive or not
+read()		file.read()				size	Optional. The number of bytes to return. Default -1, which means the whole file.	Returns the file content
+readable()	file.readable()				Returns whether the file stream can be read or not
+readline()	file.readline(size)			size	Optional. The number of bytes from the line to return. Default -1, which means the whole line.	Returns one line from the file
+readlines()	file.readlines(hint)			hint	Optional. If the number of bytes returned exceed the hint number, no more lines will be returned. Default value is  -1, which means all lines will be returned.	Returns a list of lines from the file
+seek()		file.seek(offset)			offset	Required. A number representing the position to set the current file stream position.	Change the file position
+seekable()	file.seekable()				Returns whether the file allows us to change the file position
+tell()		file.tell()				Returns the current file position
+truncate()	file.truncate(size)			size	Optional. The size of the file (in bytes) after the truncate. Default None, which means the current file stream position.	Resizes the file to a specified size
+writable()	file.writable()				Returns whether the file can be written to or not
+write()		file.write(byte)			byte	The text or byte object that will be inserted. "a":  The text will be inserted at the current file stream position, default at the end of the file. "w": The file will be emptied before the text will be inserted at the current file stream position, default 0.	Writes the specified string to the file
+writelines()	file.writelines(list)			list	The list of texts or byte objects that will be inserted.	Writes a list of strings to the file
+add()		set.add(elmnt)				elmnt	Required. The element to add to the set		Adds an element to the set
+clear()		set.clear()				Removes all the elements from the set
+copy()		set.copy()				Returns a copy of the set
+difference()	set.difference(set)			set	Required. The set to check for differences in	Returns a set containing the difference between two or more sets
+difference_update()	set.difference_update(set)	set	Required. The set to check for differences in	Removes the items in this set that are also included in another, specified set
+discard()	set.discard(value)			value	Required. The item to search for, and remove	Remove the specified item
+intersection()	set.intersection(set1, set2 ... etc)	set1	Required. The set to search for equal items in. set2	Optional. The other set to search for equal items in.You can compare as many sets you like.Separate the sets with a comma	Returns a set, that is the intersection of two or more sets
+intersection_update()	set.intersection_update(set1, set2 ... etc)	set1	Required. The set to search for equal items in. set2	Optional. The other set to search for equal items in. You can compare as many sets you like. Separate the sets with a comma	Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	set.isdisjoint(set)			set	Required. The set to search for equal items in	Returns whether two sets have a intersection or not
+issubset()	set.issubset(set)			set	Required. The set to search for equal items in	Returns whether another set contains this set or not
+issuperset()	set.issuperset(set)			set	Required. The set to search for equal items in	Returns whether this set contains another set or not
+pop()		set.pop()				Removes an element from the set
+remove()	set.remove(item)			item	Required. The item to search for, and remove	Removes the specified element
+symmetric_difference()	set.symmetric_difference(set)	set	Required. The set to check for matches in	Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	set.symmetric_difference_update(set)	set	Required. The set to check for matches in	inserts the symmetric differences from this set and another
+union()		set.union(set1, set2...)		set1	Required. The iterable to unify with. set2	Optional. The other iterable to unify with. You can compare as many iterables as you like. Separate each iterable with a comma	Return a set containing the union of sets
+update()	set.update(set)				set	Required. The iterable insert into the current set	Update the set with another set, or any other iterable
+and		A logical operator	Logical operators are used to combine conditional statements. The return value will only be True if both statements return True, otherwise it will return False.
+as		To create an alias	
+assert		For debugging	The assert keyword is used when debugging code.The assert keyword lets you test if a condition in your code returns True, if not, the program will raise an AssertionError.
+break		To break out of a loop	The break keyword is used to break out a for loop, or a while loop.
+class		To define a class	The class keyword is used to create a class.
+continue	To continue to the next iteration of a loop	The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
+def		To define a function	
+del		To delete an object	The del keyword is used to delete objects. In Python everything is an object, so the del keyword can also be used to delete variables, lists, or parts of a list etc.
+elif		Used in conditional statements, same as else if
+else		Used in conditional statements
+except		Used with exceptions, what to do when an exception occurs
+False			Boolean value, result of comparison operations
+finally			Used with exceptions, a block of code that will be executed no matter if there is an exception or not
+for			To create a for loop
+from			To import specific parts of a module
+global			To declare a global variable
+if			To make a conditional statement
+import			To import a module
+in			To check if a value is present in a list, tuple, etc.
+is			To test if two variables are equal
+lambda			To create an anonymous function
+None			Represents a null value
+nonlocal		To declare a non-local variable
+not			A logical operator
+or			A logical operator
+pass			A null statement, a statement that will do nothing
+raise			To raise an exception
+return			To exit a function and return a value
+True			Boolean value, result of comparison operations
+try			To make a try...except statement
+while			To create a while loop
+with			Used to simplify exception handling
+yield			To end a function, returns a generator
+ArithmeticError		Raised when an error occurs in numeric calculations
+AssertionError		Raised when an assert statement fails
+AttributeError		Raised when attribute reference or assignment fails
+Exception		Base class for all exceptions
+EOFError		Raised when the input() method hits an "end of file" condition (EOF)
+FloatingPointError	Raised when a floating point calculation fails
+GeneratorExit		Raised when a generator is closed (with the close() method)
+ImportError		Raised when an imported module does not exist
+IndentationError	Raised when indentation is not correct
+IndexError		Raised when an index of a sequence does not exist
+KeyError		Raised when a key does not exist in a dictionary
+KeyboardInterrupt	Raised when the user presses Ctrl+c, Ctrl+z or Delete
+LookupError		Raised when errors raised cant be found
+MemoryError		Raised when a program runs out of memory
+NameError		Raised when a variable does not exist
+NotImplementedError	Raised when an abstract method requires an inherited class to override the method
+OSError			Raised when a system related operation causes an error
+OverflowError		Raised when the result of a numeric calculation is too large
+ReferenceError		Raised when a weak reference object does not exist
+RuntimeError		Raised when an error occurs that do not belong to any specific exceptions
+StopIteration		Raised when the next() method of an iterator has no further values
+SyntaxError		Raised when a syntax error occurs
+TabError		Raised when indentation consists of tabs or spaces
+SystemError		Raised when a system error occurs
+SystemExit		Raised when the sys.exit() function is called
+TypeError		Raised when two different types are combined
+UnboundLocalError	Raised when a local variable is referenced before assignment
+UnicodeError		Raised when a unicode problem occurs
+UnicodeEncodeError	Raised when a unicode encoding problem occurs
+UnicodeDecodeError	Raised when a unicode decoding problem occurs
+UnicodeTranslateError	Raised when a unicode translation problem occurs
+ValueError		Raised when there is a wrong value in a specified data type
+ZeroDivisionError	Raised when the second operator in a division is zero
+Indentation		Indentation refers to the spaces at the beginning of a code line
+Comments		Comments are code lines that will not be executed
+Multiline Comments	How to insert comments on multiple lines
+Creating Variables	Variables are containers for storing data values
+Variable Names		How to name your variables
+Assign Values to Multiple Variables	How to assign values to multiple variables
+Output Variables	Use the print statement to output variables
+String Concatenation	How to combine strings
+Global Variables	Global variables are variables that belongs to the global scope
+Built-In Data Types	Python has a set of built-in data types
+Getting Data Type	How to get the data type of an object
+Setting Data Type	How to set the data type of an object
+Numbers			There are three numeric types in Python
+Int			The integer number type
+Float			The floating number type
+Complex			The complex number type
+Type Conversion		How to convert from one number type to another
+Random Number		How to create a random number
+Specify a Variable Type	How to specify a certain data type for a variable
+String Literals		How to create string literals
+Assigning a String to a Variable	How to assign a string value to a variable
+Multiline Strings	How to create a multiline string
+Strings are Arrays	Strings in Python are arrays of bytes representing Unicode characters
+Slicing a String	How to slice a string
+Negative Indexing on a String	How to use negative indexing when accessing a string
+String Length		How to get the length of a string
+Check In String		How to check if a string contains a specified phrase
+Format String		How to combine two strings
+Escape Characters	How to use escape characters
+Boolean Values		True or False
+Evaluate Booleans	Evaluate a value or statement and return either True or False
+Return Boolean Value	Functions that return a Boolean value
+Operators		Use operator to perform operations in Python
+Arithmetic Operators	Arithmetic operator are used to perform common mathematical operations
+Assignment Operators	Assignment operators are use to assign values to variables
+Comparison Operators	Comparison operators are used to compare two values
+Logical Operators	Logical operators are used to combine conditional statements
+Identity Operators	Identity operators are used to see if two objects are in fact the same object
+Membership Operators	Membership operators are used to test is a sequence is present in an object
+Bitwise Operators	Bitwise operators are used to compare (binary) numbers
+Lists			A list is an ordered, and changeable, collection
+Access List Items	How to access items in a list
+Change List Item	How to change the value of a list item
+Loop Through List Items	How to loop through the items in a list
+List Comprehension	How use a list comprehensive
+Check if List Item Exists	How to check if a specified item is present in a list
+List Length		How to determine the length of a list
+Add List Items		How to add items to a list
+Remove List Items	How to remove list items
+Copy a List		How to copy a list
+Join Two Lists		How to join two lists
+Tuple			A tuple is an ordered, and unchangeable, collection
+Access Tuple Items	How to access items in a tuple
+Change Tuple Item	How to change the value of a tuple item
+Loop List Items		How to loop through the items in a tuple
+Check if Tuple Item Exists	How to check if a specified item is present in a tuple
+Tuple Length		How to determine the length of a tuple
+Tuple With One Item	How to create a tuple with only one item
+Remove Tuple Items	How to remove tuple items
+Join Two Tuples	How to join two tuples
+Set			A set is an unordered, and unchangeable, collection
+Access Set Items	How to access items in a set
+Add Set Items		How to add items to a set
+Loop Set Items		How to loop through the items in a set
+Check if Set Item Exists	How to check if a item exists
+Set Length		How to determine the length of a set
+Remove Set Items	How to remove set items
+Join Two Sets		How to join two sets
+Dictionary		A dictionary is an unordered, and changeable, collection
+Access Dictionary Items		How to access items in a dictionary
+Change Dictionary Item		How to change the value of a dictionary item
+Loop Dictionary Items		How to loop through the items in a tuple
+Check if Dictionary Item Exists		How to check if a specified item is present in a dictionary
+Dictionary Length	How to determine the length of a dictionary
+Add Dictionary Item		How to add an item to a dictionary
+Remove Dictionary Items		How to remove dictionary items
+Copy Dictionary		How to copy a dictionary
+Nested Dictionaries	A dictionary within a dictionary
+If Statement		How to write an if statement
+If Indentation		If statemnts in Python relies on indentation (whitespace at the beginning of a line)
+Elif			elif is the same as "else if" in other programming languages
+Else			How to write an if...else statement
+Shorthand If		How to write an if statement in one line
+Shorthand If Else	How to write an if...else statement in one line
+If AND			Use the and keyword to combine if statements
+If OR			Use the or keyword to combine if statements
+If NOT			Use the not keyword to reverse the condition
+Nested If		How to write an if statement inside an if statement
+The pass Keyword in If	Use the pass keyword inside empty if statements
+While			How to write a while loop
+While Break		How to break a while loop
+While Continue		How to stop the current iteration and continue wit the next
+While Else		How to use an else statement in a while loop
+For		How to write a for loop
+Loop Through a String		How to loop through a string
+For Break	How to break a for loop
+For Continue	How to stop the current iteration and continue wit the next
+Looping Through a rangee	How to loop through a range of values
+For Else	How to use an else statement in a for loop
+Nested Loops	How to write a loop inside a loop
+For pass	Use the pass keyword inside empty for loops
+Function	How to create a function in Python
+Call a Function		How to call a function in Python
+Function Arguments	How to use arguments in a function
+*args		To deal with an unknown number of arguments in a function, use the * symbol before the parameter name
+Keyword Arguments	How to use keyword arguments in a function
+**kwargs	To deal with an unknown number of keyword arguments in a function, use the * symbol before the parameter name
+Default Parameter Value		How to use a default parameter value
+Passing a List as an Argument		How to pass a list as an argument
+Function Return Value		How to return a value from a function
+The pass Statement i Functions		Use the pass statement in empty functions
+Function Recursion		Functions that can call itself is called recursive functions
+Lambda Function			How to create anonymous functions in Python
+Why Use Lambda Functions	Learn when to use a lambda function or not
+Array			Lists can be used as Arrays
+What is an Array	Arrays are variables that can hold more than one value
+Access Arrays		How to access array items
+Array Length		How to get the length of an array
+Looping Array Elements		How to loop through array elements
+Add Array Element	How to add elements from an array
+Remove Array Element		How to remove elements from an array
+Array Methods		Python has a set of Array/Lists methods
+Class			A class is like an object constructor
+Create Class		How to create a class
+The Class __init__() Function	The __init__() function is executed when the class is initiated
+Object Methods		Methods in objects are functions that belongs to the object
+self			The self parameter refers to the current instance of the class
+Modify Object Properties	How to modify properties of an object
+Delete Object Properties	How to modify properties of an object
+Delete Object		How to delete an object
+Class pass Statement		Use the pass statement in empty classes
+Create Parent Class	How to create a parent class
+Create Child Class	How to create a child class
+Create the __init__() Function		How to create the __init__() function
+super Function		The super() function make the child class inherit the parent class
+Add Class Properties	How to add a property to a class
+Add Class Methods	How to add a method to a class
+Iterators		An iterator is an object that contains a countable number of values
+Iterator vs Iterable		What is the difference between an iterator and an iterable
+Loop Through an Iterator	How to loop through the elements of an iterator
+Create an Iterator	How to create an iterator
+StopIteration		How to stop an iterator
+Global Scope		When does a variable belong to the global scope?
+Global Keyword		The global keyword makes the variable global
+Create a Module		How to create a module
+Variables in Modules	How to use variables in a module
+Renaming a Module	How to rename a module
+Built-in Modules	How to import built-in modules
+Using the dir() Function	List all variable names and function names in a module
+Import From Module	How to import only parts from a module
+Datetime Module		How to work with dates in Python
+Date Output		How to output a date
+Create a Date Object	How to create a date object
+The strftime Method	How to format a date object into a readable string
+Date Format Codes	The datetime module has a set of legal format codes
+JSON			How to work with JSON in Python
+Parse JSON		How to parse JSON code in Python
+Convert into JSON	How to convert a Python object in to JSON
+Format JSON		How to format JSON output with indentations and line breaks
+Sort JSON		How to sort JSON
+RegEx Module		How to import the regex module
+RegEx Functions		The re module has a set of functions
+Metacharacters in RegEx		Metacharacters are characters with a special meaning
+RegEx Special Sequences		A backslash followed by a a character has a special meaning
+RegEx Sets		A set is a set of characters inside a pair of square brackets with a special meaning
+RegEx Match Object	The Match Object is an object containing information about the search and the result
+Install PIP		How to install PIP
+PIP Packages		How to download and install a package with PIP
+PIP Remove Package		How to remove a package with PIP
+Error Handling		How to handle errors in Python
+Handle Many Exceptions		How to handle more than one exception
+Try Else		How to use the else keyword in a try statement
+Try Finally		How to use the finally keyword in a try statement
+raise		How to raise an exception in Python
+x = "Hello World"	str	
+x = 20	int	
+x = 20.5	float	
+x = 1j	complex	
+x = ["apple", "banana", "cherry"]	list	
+x = ("apple", "banana", "cherry")	tuple	
+x = range(6)	range	
+x = {"name" : "John", "age" : 36}	dict	
+x = {"apple", "banana", "cherry"}	set	
+x = frozenset({"apple", "banana", "cherry"})	frozenset	
+x = True	bool	
+x = b"Hello"	bytes	
+x = bytearray(5)	bytearray	
+x = memoryview(bytes(5))	memoryview	
+x = None	NoneType	
+x = str("Hello World")	str	
+x = int(20)	int	
+x = float(20.5)	float	
+x = complex(1j)	complex	
+x = list(("apple", "banana", "cherry"))	list	
+x = tuple(("apple", "banana", "cherry"))	tuple	
+x = range(6)	range	
+x = dict(name="John", age=36)	dict	
+x = set(("apple", "banana", "cherry"))	set	
+x = frozenset(("apple", "banana", "cherry"))	frozenset	
+x = bool(5)	bool	
+x = bytes(5)	bytes	
+x = bytearray(5)	bytearray	
+x = memoryview(bytes(5))	memoryview	
+random		import random		importiert das Modul random zum generieren 
+abs()	Returns the absolute value of a number
+all()	Returns True if all items in an iterable object are true
+any()	Returns True if any item in an iterable object is true
+ascii()	Returns a readable version of an object. Replaces none-ascii characters with escape character
+bin()	Returns the binary version of a number
+bool()	Returns the boolean value of the specified object
+bytearray()	Returns an array of bytes
+bytes()	Returns a bytes object
+callable()	Returns True if the specified object is callable, otherwise False
+chr()	Returns a character from the specified Unicode code.
+classmethod()	Converts a method into a class method
+compile()	Returns the specified source as an object, ready to be executed
+complex()	Returns a complex number
+delattr()	Deletes the specified attribute (property or method) from the specified object
+dict()	Returns a dictionary (Array)
+dir()	Returns a list of the specified object's properties and methods
+divmod()	Returns the quotient and the remainder when argument1 is divided by argument2
+enumerate()	Takes a collection (e.g. a tuple) and returns it as an enumerate object
+eval()	Evaluates and executes an expression
+exec()	Executes the specified code (or object)
+filter()	Use a filter function to exclude items in an iterable object
+float()	Returns a floating point number
+format()	Formats a specified value
+frozenset()	Returns a frozenset object
+getattr()	Returns the value of the specified attribute (property or method)
+globals()	Returns the current global symbol table as a dictionary
+hasattr()	Returns True if the specified object has the specified attribute (property/method)
+hash()	Returns the hash value of a specified object
+help()	Executes the built-in help system
+hex()	Converts a number into a hexadecimal value
+id()	Returns the id of an object
+input()	Allowing user input
+int()	Returns an integer number
+isinstance()	Returns True if a specified object is an instance of a specified object
+issubclass()	Returns True if a specified class is a subclass of a specified object
+iter()	Returns an iterator object
+len()	Returns the length of an object
+list()	Returns a list
+locals()	Returns an updated dictionary of the current local symbol table
+map()	Returns the specified iterator with the specified function applied to each item
+max()	Returns the largest item in an iterable
+memoryview()	Returns a memory view object
+min()	Returns the smallest item in an iterable
+next()	Returns the next item in an iterable
+object()	Returns a new object
+oct()	Converts a number into an octal
+open()	Opens a file and returns a file object
+ord()	Convert an integer representing the Unicode of the specified character
+pow()	Returns the value of x to the power of y
+print()	Prints to the standard output device
+property()	Gets, sets, deletes a property
+range()	Returns a sequence of numbers, starting from 0 and increments by 1 (by default)
+repr()	Returns a readable version of an object
+reversed()	Returns a reversed iterator
+round()	Rounds a numbers
+set()	Returns a new set object
+setattr()	Sets an attribute (property/method) of an object
+slice()	Returns a slice object
+sorted()	Returns a sorted list
+staticmethod()	Converts a method into a static method
+str()	Returns a string object
+sum()	Sums the items of an iterator
+super()	Returns an object that represents the parent class
+tuple()	Returns a tuple
+type()	Returns the type of an object
+vars()	Returns the __dict__ property of an object
+zip()	Returns an iterator, from two or more iterators
+count()			tuple.count(value)	value	Required. The item to search for	Returns the number of times a specified value occurs in a tuple
+index()			tuple.index(value)	value	Required. The item to search for	Searches the tuple for a specified value and returns the position of where it was found
+seed()		Initialize the random number generator
+getstate()	Returns the current internal state of the random number generator
+setstate()	Restores the internal state of the random number generator
+getrandbits()	Returns a number representing the random bits
+randrange()	Returns a random number between the given range
+randint()	Returns a random number between the given range
+choice()	Returns a random element from the given sequence
+choices()	Returns a list with a random selection from the given sequence
+shuffle()	Takes a sequence and returns the sequence in a random order
+sample()	Returns a given sample of a sequence
+random()	Returns a random float number between 0 and 1
+uniform()	Returns a random float number between two given parameters
+triangular()	Returns a random float number between two given parameters, you can also set a mode parameter to specify the midpoint between the two other parameters
+betavariate()	Returns a random float number between 0 and 1 based on the Beta distribution (used in statistics)
+expovariate()	Returns a random float number based on the Exponential distribution (used in statistics)
+gammavariate()	Returns a random float number based on the Gamma distribution (used in statistics)
+gauss()	Returns a random float number based on the Gaussian distribution (used in probability theories)
+lognormvariate()	Returns a random float number based on a log-normal distribution (used in probability theories)
+normalvariate()	Returns a random float number based on the normal distribution (used in probability theories)
+vonmisesvariate()	Returns a random float number based on the von Mises distribution (used in directional statistics)
+paretovariate()	Returns a random float number based on the Pareto distribution (used in probability theories)
+weibullvariate()	Returns a random float number based on the Weibull distribution (used in statistics)
+pd.Series()		Create one-dimensional array to hold any data type. Invoke the pd.Series() method and then pass a list of values. Pandas will default count index from 0.	series1 = pd.Series([1,2,3,4]), index=['a', 'b', 'c', 'd'])
+srs.name		srs.name = 'name'	Set series name
+srs.index.name		srs.index.name = 'Index name'	Set index name
+pd.DataFrame()		df = pd.DataFrame(df)		Bsp: df = ({'a' : [1,2,3], 'b' : ...}, index = [1,2,3])		Ein zweidimensionales DataFrame erstellen. a, b... sind die Spaltennamen, die Indizes koennen mit index selbst bestimmt werden
+pd.DataFrame()		df = pd.DataFrame(df)		Bsp: df = ([[1,2,3], [4,5,6], index=[1,2,3], columns=['a','b','c']) 	DataFrame mit columns(Spalten) organisieren, die Indizes koennen mit index selbst bestimmt werden		#erstellen
+pd.read_csv()		data = pd.read_csv('file.csv', index_col=0)	csv datei zum lesen und schreiben oeffnen und optional mit index versehen
+pd.read_excel()		pd.read_excel('file.xlsx')	df.to_excel('dir/myDataFrame.xlsx', sheet_name='Sheet2')	excel/ xlsx Datei zum lesen und schreiben oeffnen
+pd.read_sql()		from sqlalchemy import create_engine \n	engine = create_engine('sqlite:///:memory:')	\n 	pd.read_sql("SELECT * FROM my_table;", engine)	\n	pd.read_sql_table('my_table', engine)	\n	pd.read_sql_query("SELECT * FROM my_table;", engine)	\n	df.to_sql('myDf', engine)	Eine SQL lesen und schreiben	read_sql_table() and read_sql_query()
+ser[]			ser[x]  element x einer Series aufrufen, ser[:x] die ersten x elemente, ser[-x:] die letzten x elemente
+pd.Series()		pd.Series(ser)			Bsp: ser = [1, 2, 3]				Erzeugt eine eindimensionale Matrix/ Datenbereich
+pd.Series()		pd.Series(ser, index = ['a',...])						Erzeugt eine eindimensionale Matrix/ Datenbereich bei dem die Indizes selbst bestimmt werden
+pd.Series()		pd.Series(dict)			Series koennen auch aus einem dictionary erstellt werden, mit index = ['a',...] koennen auch nur bestimmte Daten in die Series geholt werden
+DataFrame		ist ein mehrdimensionaler Datenbereich (Matrix)		Series sind quasi einzelne Spalten (columns)
+df.loc[]		df.loc[x]	gibt die angeforderte Reihe x zurueck, oder die angeforderten Reihen von x bis y   df.loc[x:y]
+df.loc[[]]		df.loc[[x, y]]		gibt nur eine bestimmte Liste von Reihen zurueck
+
+
+
